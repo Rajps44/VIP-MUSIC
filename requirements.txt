@@ -5,6 +5,7 @@ openai
 aiofiles
 aiohttp
 asyncio
+wheel
 beautifulsoup4
 dnspython
 ffmpeg-python
