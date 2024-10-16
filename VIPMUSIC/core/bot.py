@@ -26,18 +26,16 @@ from ..logging import LOGGER
 
 uvloop.install()
 
-# Flask app initialize
+# Flask app initialization
 app = Flask(__name__)
-
 
 @app.route("/")
 def home():
     return "Bot is running"
 
-
+# Flask server run function
 def run():
     app.run(host="0.0.0.0", port=8000, debug=False)
-
 
 # VIPBot Class
 class VIPBot(Client):
@@ -165,13 +163,11 @@ class VIPBot(Client):
 
         LOGGER(__name__).info(f"MusicBot Started as {self.name}")
 
-
 # Define the async boot function
 async def anony_boot():
     bot = VIPBot()
     await bot.start()
     await idle()
-
 
 if __name__ == "__main__":
     LOGGER(__name__).info("Starting Flask server...")
