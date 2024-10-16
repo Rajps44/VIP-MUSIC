@@ -18,13 +18,13 @@ load_dotenv()
 
 # Get it from my.telegram.org
 
-API_ID = int(getenv("API_ID", "25208218"))
+API_ID = int(getenv("API_ID", ""))
 
-API_HASH = getenv("API_HASH", "cc8e841203c92f077015b865f44a8663")
+API_HASH = getenv("API_HASH")
 
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN","7478730845:AAH_lVW6hmXCfI0vtVrGMb60PhItPyFOI_8")
+BOT_TOKEN = getenv("BOT_TOKEN")
 
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
@@ -70,12 +70,12 @@ SONG_DOWNLOAD_DURATION = int(
 
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002192763590"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6174868004").split())
+    map(int, getenv("OWNER_ID", "1808943146").split())
 )  # Input type must be interger
 
 
@@ -96,7 +96,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Rajps44/VIP-MUSIC",
+    "https://github.com/THE-VIP-BOY-OP/VIP-MUSIC",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -110,18 +110,18 @@ GIT_TOKEN = getenv(
 AUTO_GCAST = os.getenv("AUTO_GCAST", "on")
 
 # Auto Broadcast Message That You Want Use In Auto Broadcast In All Groups.
-AUTO_GCAST_MSG = getenv("AUTO_GCAST_MSG", "https://t.me/+U59IwGfBP8FjNzE1")
+AUTO_GCAST_MSG = getenv("AUTO_GCAST_MSG", "")
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/+U59IwGfBP8FjNzE1"
+    "SUPPORT_CHANNEL", "https://t.me/VIP_CREATORS"
 )  # Example:- https://t.me/VIP_CREATORS
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/+U59IwGfBP8FjNzE1"
+    "SUPPORT_GROUP", "https://t.me/TG_FRIENDSS"
 )  # Example:- https://t.me/TG_FRIENDSS
 
 SUPPORT_CHAT = getenv(
-    "SUPPORT_GROUP", "https://t.me/+U59IwGfBP8FjNzE1"
+    "SUPPORT_GROUP", "https://t.me/TG_FRIENDSS"
 )  # Example:- https://t.me/TG_FRIENDSS
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", False)
@@ -386,4 +386,4 @@ if TELEGRAM_VIDEO_URL:
         if not re.match("(?:http|https)://", TELEGRAM_VIDEO_URL):
             print(
                 "[ERROR] - Your TELEGRAM_VIDEO_URL url is wrong. Please ensure that it starts with https://"
-            )
+)
