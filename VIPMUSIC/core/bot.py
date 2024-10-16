@@ -39,7 +39,7 @@ def health_check():
 
 # Flask server run function
 def run():
-    app.run(host="0.0.0.0", port=8000, debug=True)  # Changed port to 8001
+    app.run(host="0.0.0.0", port=8000, debug=False)  # Changed port to 8001
 
 # VIPBot Class
 class VIPBot(Client):
