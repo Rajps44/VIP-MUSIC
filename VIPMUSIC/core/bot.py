@@ -5,7 +5,6 @@
 # Please see < https://github.com/THE-VIP-BOY-OP/VIP-MUSIC/blob/master/LICENSE >
 #
 # All rights reserved.
-#
 
 import uvloop
 
