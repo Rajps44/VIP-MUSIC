@@ -1,10 +1,8 @@
 Abg==2.3.1
 deep-translator
-pyromod
 openai
 aiofiles
 aiohttp
-asyncio
 wheel
 beautifulsoup4
 dnspython
@@ -22,7 +20,6 @@ psutil
 pytube
 pykeyboard
 unidecode
-pyromod
 py-tgcalls==1.2.9
 ntgcalls==1.1.2
 python-dotenv
