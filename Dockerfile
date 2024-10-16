@@ -18,7 +18,7 @@ RUN python -m pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt  # Ensure requirements are installed
 
 # Expose the necessary port
-EXPOSE 8000  # Ensure the exposed port matches the one your app runs on
+EXPOSE 8001  # Ensure the exposed port matches the one your app runs on
 
 # Command to run the application
 CMD ["python", "-m", "VIPMUSIC"]  # Start your application
