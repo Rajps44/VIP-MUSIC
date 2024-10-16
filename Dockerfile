@@ -18,7 +18,7 @@ RUN python -m pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt  # Fixed from pip3 to pip for consistency
 
 # Expose the necessary port
-EXPOSE 8001
+EXPOSE 8000
 
 # Add a health check to ensure the app is running
 HEALTHCHECK CMD curl --fail http://localhost:8001/health || exit 1
