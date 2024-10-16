@@ -8,7 +8,7 @@ import asyncio
 import threading
 
 import uvloop
-from flask import Flask
+from flask import Flask, jsonify  # Import jsonify for JSON response
 from pyrogram import Client, idle
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import (
@@ -35,11 +35,11 @@ def home():
 
 @app.route("/health")
 def health_check():
-    return "Healthy", 200  # Health check endpoint
+    return jsonify({"status": "Healthy"}), 200  # Health check endpoint returning JSON
 
 # Flask server run function
 def run():
-    app.run(host="0.0.0.0", port=8001, debug=False)  # Changed port to 8001
+    app.run(host="0.0.0.0", port=8000, debug=True)  # Changed port to 8001
 
 # VIPBot Class
 class VIPBot(Client):
@@ -140,7 +140,7 @@ class VIPBot(Client):
                         BotCommand("song", "❥ Download the requested song"),
                         BotCommand("video", "❥ Download the requested video song"),
                         BotCommand("gali", "❥ Reply with fun"),
-                        BotCommand("shayri", "❥ Get a shayari"),
+                        BotCommand("shayari", "❥ Get a shayari"),
                         BotCommand("love", "❥ Get a love shayari"),
                         BotCommand("sudolist", "❥ Check the sudo list"),
                         BotCommand("owner", "❥ Check the owner"),
