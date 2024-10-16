@@ -15,10 +15,13 @@ COPY . .
 
 # Upgrade pip and install dependencies
 RUN python -m pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt  # Ensure requirements are installed
+RUN pip install --no-cache-dir -r requirements.txt  # Fixed from pip3 to pip for consistency
 
 # Expose the necessary port
-EXPOSE 8001  # Ensure the exposed port matches the one your app runs on
+EXPOSE 8001
+
+# Add a health check to ensure the app is running
+HEALTHCHECK CMD curl --fail http://localhost:8001/health || exit 1
 
 # Command to run the application
-CMD ["python", "-m", "VIPMUSIC"]  # Start your application
+CMD ["python", "-m", "VIPMUSIC"]
